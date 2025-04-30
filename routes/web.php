@@ -29,6 +29,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/about', function () {
         return view('about');
     })->name('about');
+    Route::get('/curriculum', function () {
+        return view('curriculum');
+    })->name('curriculum');
+    Route::get('/eskul', function () {
+        return view('eskul');
+    })->name('eskul');
     Route::get('/blog', function () {
         return view('blog');
     })->name('blog');
