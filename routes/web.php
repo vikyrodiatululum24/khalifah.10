@@ -14,33 +14,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('dashboard');
+})->name('dashboard');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+Route::get('/curriculum', function () {
+    return view('curriculum');
+})->name('curriculum');
+Route::get('/eskul', function () {
+    return view('eskul');
+})->name('eskul');
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
+Route::get('/gallery', function () {
+    return view('gallery');
+})->name('gallery');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::get('/about', function () {
-        return view('about');
-    })->name('about');
-    Route::get('/curriculum', function () {
-        return view('curriculum');
-    })->name('curriculum');
-    Route::get('/eskul', function () {
-        return view('eskul');
-    })->name('eskul');
-    Route::get('/blog', function () {
-        return view('blog');
-    })->name('blog');
-    Route::get('/gallery', function () {
-        return view('gallery');
-    })->name('gallery');
 });
 
 require __DIR__.'/auth.php';

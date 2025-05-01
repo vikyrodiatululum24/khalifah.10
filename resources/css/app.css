@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "tailwindcss";
+@plugin "flyonui";
+@import "flyonui/variants.css";
+@source "../node_modules/flyonui/flyonui.js"; */
+
+:root {
+  --warna-primary: #FF9800;
+  --warna-secondary: #17254E;
+  --warna-danger: #333931;
+}
+
+.bg-fasilitas {
+  background-image: url('img/bg-fasilitas.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
