@@ -8,16 +8,16 @@
 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pt-20 pb-20">
         <div class="md:flex">
-            <div class="w-full sm:w-1/2 md:1/3 p-6">
+            <div class="w-full sm:w-1/2 md:1/3 p-6 motion-scale-in-0 motion-opacity-in-0 motion-blur-in-[5px] motion-ease-spring-smooth intersect-half origin-bottom-left">
                 <img src="{{ asset('img/selayang pandang.png') }}" alt="about"
                     class="w-full h-full object-cover rounded-lg shadow-lg">
             </div>
-            <div class="w-full sm:1/2 p-6">
+            <div class="w-full sm:1/2 p-6 motion-scale-in-0 motion-opacity-in-0 motion-blur-in-[5px] motion-ease-spring-smooth intersect-half origin-bottom-right">
                 <div class="p-1 bg-primary opacity-50 rounded-md w-20 text-center mb-4">
                     <p class="text-xs">About Us</p>
                 </div>
-                <h2 class="text-3xl font-bold text-gray-800">SELAYANG PANDANG</h2>
-                <p class="text-gray-600 mt-4 text-sm text-justify">Pesantren Modern Khalifah berdiri pada tahun 2012
+                <h2 class="text-3xl font-bold text-gray-800 ">SELAYANG PANDANG</h2>
+                <p class="text-gray-600 mt-4 text-sm text-justify motion-delay-[400ms] motion-ease-spring-bouncy motion-scale-in-0">Pesantren Modern Khalifah berdiri pada tahun 2012
                     berada dibawah
                     naungan yayasan wakaf khalifah. Pada tahun ini PM. Khalifah memiliki Lembaga formal dibawah naungan
                     KEMENAG dan kemendiknas yaitu SMP Khalifah Boarding  School dan SMA Khalifah Boarding School. PM.
@@ -47,18 +47,18 @@
                 <p class="text-xs">Visi & Misi</p>
             </div>
             <div class="md:flex gap-4">
-                <div class="w-full sm:1/2 md:1/2 mb-4">
+                <div class="w-full sm:1/2 md:1/2 mb-4 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 intersect:motion-blur-in-[5px] intersect:motion-ease-spring-smooth intersect-half origin-top-right">
                     <div class="rounded-md border border-gray-800 shadow-sm p-6 relative">
                         <img src="{{ asset('img/kutip.png') }}" alt="kutip" class="absolute -top-5 left-0 w-10 h-10">
                         <h2 class="text-3xl font-bold text-gray-800">Visi</h2>
-                        <p class="text-gray-600 mt-4 text-sm text-justify">MEWUJUDKAN CALON PEMIMPIN MASA DEPAN YANG
+                        <p class="text-gray-600 mt-4 text-sm text-justify intersect:motion-delay-[400ms] intersect:motion-ease-spring-bouncy intersect:motion-scale-in-0">MEWUJUDKAN CALON PEMIMPIN MASA DEPAN YANG
                             BERKARAKTER ISLAMI</p>
                     </div>
                 </div>
-                <div class="w-full sm:1/2 md:1/2 rounded-md border border-gray-800 shadow-sm p-6 relative mb-4">
+                <div class="w-full sm:1/2 md:1/2 rounded-md border border-gray-800 shadow-sm p-6 relative mb-4 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 intersect:motion-blur-in-[5px] intersect:motion-ease-spring-smooth intersect-half origin-top-left">
                     <img src="{{ asset('img/kutip.png') }}" alt="kutip" class="absolute -top-5 left-0 w-10 h-10">
                     <h2 class="text-3xl font-bold text-gray-800">Misi</h2>
-                    <ul class="list-disc pl-5 text-gray-600 mt-4 text-sm">
+                    <ul class="list-disc pl-5 text-gray-600 mt-4 text-sm intersect:motion-delay-[400ms] intersect:motion-ease-spring-bouncy intersect:motion-scale-in-0">
                         <li>MENDIDIK PEMIMPIN YANG CINTA AL-QUR'AN, MEMILIKI KESEIMBANGAN RUHIYYAH, AQLIYYAH DAN
                             JASADIYYAH</li>
                         <li>MENANAMKAN SIFAT JUJUR, TANGGUNG JAWAB, DAN MEMILIKI KEPEDULIAN YANG TINGGI</li>

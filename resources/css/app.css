@@ -1,1 +1,29 @@
 @import "tailwindcss";
+@import "./../../node_modules/flyonui/variants.css";
+@source "../views/layouts/app.blade.php";
+@import "tailwindcss-intersect";
+@plugin "tailwindcss-motion";
+@plugin "@iconify/tailwind4";
+@source "./../../node_modules/flyonui/dist/index.js";
+@source "./../../node_modules/flyonui/dist/accordion.js"; 
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+
+@plugin "flyonui" {
+  themes: light;
+  include: textarea, carousel, input, iconify, button, card, avatar, badge, alert, accordion, modal, dropdown, tooltip, toast, tabs, table, pagination, progressbar, select, slider, switcher, iconify;
+  iconify: true;
+}
+
+
+@theme {
+  --color-primary: #FF9800;
+  --color-secondary: #17254E;
+  --color-accent: #333931;
+
+  --font-sora: "Sora", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}

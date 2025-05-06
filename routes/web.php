@@ -32,9 +32,18 @@ Route::get('/eskul', function () {
 Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
+Route::get('/blogs', function () {
+    return view('blogs');
+})->name('blogs');
 Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
+Route::get('/psb', function () {
+    return view('psb');
+})->name('psb');
+Route::get('/student', function () {
+    return view('student');
+})->name('student');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

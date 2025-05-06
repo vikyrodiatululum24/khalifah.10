@@ -1,9 +1,9 @@
 <x-app-layout>
   <x-slot name="header">
       <h2 class="font-bold text-center text-3xl md:text-6xl uppercase text-gray-800 leading-tight">
-          ekstrakurikuler
+          PENERIMAAN SANTRI BARU
       </h2>
-      <p class="text-center text-gray-600 mt-4 text-lg">Home <span class="text-primary">//</span> Ekstrakurikuler</p>
+      <p class="text-center text-gray-600 mt-4 text-lg">Home <span class="text-primary">//</span> Penerimaan Santri Baru</p>
   </x-slot>
 
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-4">
@@ -35,10 +35,31 @@
               </div>
             <x-text-header>Category</x-text-header>
             <div x-data @notify.window="alert($event.detail.message)">
-              <button class="btn btn-primary rounded-md w-full justify-between"
-                      @click="$dispatch('notify', { message: 'Hello World' })">
-                Primary
-                <svg class="fill-current h-4 w-4 transform transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <button class="btn btn-primary rounded-md w-full justify-between mb-2"
+                      @click="$dispatch('notify', { message: 'Akademik & Bahasa' })">
+                Akademik & Bahasa
+                <svg class="fill-current h-4 w-4 transform transition-transform duration-200 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button class="btn btn-primary rounded-md w-full justify-between mb-2"
+                      @click="$dispatch('notify', { message: 'Teknologi & Keterampilan' })">
+                      Teknologi & Keterampilan
+                <svg class="fill-current h-4 w-4 transform transition-transform duration-200 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button class="btn btn-primary rounded-md w-full justify-between mb-2"
+                      @click="$dispatch('notify', { message: 'Keislaman & Seni Islami' })">
+                      Keislaman & Seni Islami
+                <svg class="fill-current h-4 w-4 transform transition-transform duration-200 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button class="btn btn-primary rounded-md w-full justify-between mb-2"
+                      @click="$dispatch('notify', { message: 'Olahraga & Kesehatan Jasmani' })">
+                      Olahraga & Kesehatan Jasmani
+                <svg class="fill-current h-4 w-4 transform transition-transform duration-200 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>
               </button>
