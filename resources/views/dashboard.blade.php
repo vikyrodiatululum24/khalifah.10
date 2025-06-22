@@ -4,7 +4,7 @@
             <div class="sm:flex justify-between items-center gap-4">
                 <div
                     class="p-6 text-secondary sm:w-1/2 sm:px-6 lg:px-8 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
-                    <h2 class="text-3xl md:text-6xl leading-tight mb-4">
+                    <h2 class="text-2xl md:text-4xl leading-tight mb-4">
                         Memujudkan <span class="font-bold">Pemimpin</span> Masa Depan Yang <span
                             class="font-bold">Berkarakter Islami</span>
                     </h2>
