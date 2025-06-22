@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-bold text-center text-3xl md:text-6xl uppercase text-gray-800 leading-tight">
+        <h2 class="font-extrabold text-center text-3xl md:text-6xl uppercase text-primary text-shadow-lg leading-tight">
             Student
         </h2>
         <p class="text-center text-gray-600 mt-4 text-lg">Home <span class="text-primary">//</span> Student</p>

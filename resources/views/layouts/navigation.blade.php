@@ -1,13 +1,11 @@
-<nav x-data="{ open: false, scrolled: false }" 
-    @scroll.window="scrolled = window.scrollY > 50" 
-    x-bind:class="{ 'bg-white shadow-md': scrolled, 'bg-transparent': !scrolled }" 
-    class="fixed top-0 w-full z-50 transition-all duration-300"
-    x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)" 
-    :class="scrolled ? 'bg-white shadow-md' : 'bg-transparent'" 
+<nav x-data="{ open: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 50"
+    x-bind:class="{ 'bg-white shadow-md': scrolled, 'bg-transparent': !scrolled }"
+    class="fixed top-0 w-full z-50 transition-all duration-300" x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)"
+    :class="scrolled || open ? 'bg-white shadow-md' : 'bg-transparent'"
     class="fixed top-0 w-full z-50 transition-all duration-300">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 items-center">
 
             <!-- Logo -->
             <div class="shrink-0 flex items-center">
@@ -31,7 +29,8 @@
                 <div class="hidden space-x-8 sm:-my-px items-center sm:ms-10 sm:flex">
                     <x-dropdown align="center" width="48">
                         <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-secondary focus:outline-none transition ease-in-out duration-150 cursor-pointer">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-secondary focus:outline-none transition ease-in-out duration-150 cursor-pointer">
                                 <div>Curriculum</div>
                                 <div class="ms-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -46,10 +45,10 @@
 
                         <x-slot name="content">
                             <x-dropdown-link :href="route('curriculum')" :active="request()->routeIs('curriculum')">
-                            {{ __('Curriculum') }}
+                                {{ __('Curriculum') }}
                             </x-dropdown-link>
                             <x-dropdown-link :href="route('eskul')" :active="request()->routeIs('eskul')">
-                            {{ __('Ekstrakurikuler') }}
+                                {{ __('Ekstrakurikuler') }}
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
@@ -57,7 +56,8 @@
                 <div class="hidden space-x-8 items-center sm:-my-px sm:ms-10 sm:flex">
                     <x-dropdown align="center" width="48">
                         <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-secondary focus:outline-none transition ease-in-out duration-150 cursor-pointer">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-secondary focus:outline-none transition ease-in-out duration-150 cursor-pointer">
                                 <div>Student</div>
                                 <div class="ms-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +82,8 @@
                     </x-dropdown>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('blogs')" :active="request()->routeIs('blogs')">
-                        {{ __('Blogs') }}
+                    <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
+                        {{ __('Update') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -95,42 +95,63 @@
 
 
             <!-- Settings Dropdown -->
-            {{-- <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+            @if (Route::has('login'))
+                @auth
+                    <div class="hidden sm:flex sm:items-center sm:ms-6">
+                        <x-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-primary hover:shadow focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ Auth::user()->name }}</div>
 
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
+                                    <div class="ms-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </x-slot>
 
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
 
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
 
-                            <x-dropdown-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                                    <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
-            </div> --}}
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                @else
+                    <div class="hidden sm:flex sm:items-center sm:ms-6">
+                        <a href="{{ route('login') }}"
+                        class="font-semibold bg-primary rounded-md hover:shadow-primary p-2.5 text-white focus:outline focus:rounded-sm transition-transform duration-200 hover:scale-105 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H8m0 0l3-3m-3 3l3 3" />
+                        </svg>
+                        Log
+                        in</a>
+                        
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}"
+                        class="ml-4 font-semibold text-gray-600 hover:text-white transition-transform duration-200 hover:scale-105">Register</a>
+                        @endif
+                    </div>
+                @endauth
+            @endif
+
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center md:hidden">

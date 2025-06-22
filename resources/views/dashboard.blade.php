@@ -1,10 +1,7 @@
 <x-app-layout>
     <div class="bg-gradient-to-r from-cyan-200 to-blue-400 w-full py-10">
-        <div class="max-w-7xl flex items-center mx-auto sm:px-6 lg:px-8 min-h-screen">
+        <div class="max-w-7xl flex items-center mx-auto sm:px-6 lg:px-8 ">
             <div class="sm:flex justify-between items-center gap-4">
-                {{-- <div class="sm:hidden flex px-4 sm:px-6 lg:px-8 w-1/2 items-center mx-auto gap-2 justify-center">
-                    <img src="{{ asset('img/hero.png') }}" alt="Hero" class="object-cover">
-                </div> --}}
                 <div
                     class="p-6 text-secondary sm:w-1/2 sm:px-6 lg:px-8 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
                     <h2 class="text-3xl md:text-6xl leading-tight mb-4">
@@ -15,9 +12,9 @@
                         {{ __('Daftar Sekarang') }}
                     </x-primary-button>
                 </div>
-                <div class="sm:flex px-4 sm:px-6 lg:px-8 sm:w-1/2 items-center mx-auto gap-2 justify-center">
+                <div class="flex px-4 sm:px-6 lg:px-8 sm:w-1/2 items-center mx-auto gap-2 justify-center">
                     <img src="{{ asset('img/hero.png') }}" alt="Hero"
-                        class="object-cover intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
+                        class="object-cover w-80 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
                 </div>
             </div>
         </div>
@@ -37,7 +34,7 @@
 
     {{-- Quote --}}
     <div class="py-10 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-sm md:text-xl px-4 sm:px-6 lg:px-8">
             <h2
                 class="font-bold text-center text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-bottom">
                 يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قِيلَ لَكُمْ تَفَسَّحُوا فِي الْمَجَالِسِ فَافْسَحُوا يَفْسَحِ
@@ -72,11 +69,11 @@
                 <h2 class="text-2xl md:text-4xl leading-tight mb-4 font-poppins">
                     Pesantren Modern <Span class="text-primary">Khalifah</Span> Boarding School
                 </h2>
-                <p class="text-secondary font-sora">
+                <p class="text-secondary font-sora text-sm md:text-xl">
                     Pondok Pesantren Al-Mujadilah adalah lembaga pendidikan Islam yang berdiri sejak tahun 2000. Kami
                     berkomitmen untuk mencetak generasi pemimpin masa depan yang berkarakter Islami.
                 </p>
-                <div class="flex justify-between font-sora text-accent gap-4">
+                <div class="flex justify-between text-sm md:text-xl font-sora text-accent gap-4">
                     <div class="mt-4 w-1/2">
                         <p class="text-secondary font-bold">
                             Visi :
@@ -108,11 +105,11 @@
             <h2 class="font-bold text-center text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins">
                 Mendidik Pemimpin Masa Depan
             </h2>
-            <p class="font-sora text accent text-center max-w-5xl mx-auto">
+            <p class="font-sora text-sm md:text-xl text-accent text-center max-w-5xl mx-auto">
                 Pesantren Modern Khalifah menghadirkan pendidikan terpadu yang menggabungkan kurikulum nasional dengan
                 kurikulum ke-khasan Khalifah Boarding School.
             </p>
-            <div class="sm:flex justify-center gap-4 my-6">
+            <div class="sm:flex justify-center gap-4 my-6 text-sm md:text-xl">
                 <div
                     class="card sm:max-w-md bg-sky-500 text-white relative mb-4 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
                     <img src="{{ asset('img/shape.png') }}" alt="shape" class="absolute top-0 right-0 object-cover">
@@ -162,13 +159,14 @@
                 Pesantren Modern Khalifah memiliki program unggulan yang mendukung pembentukan karakter santri.
             </h2>
             <div class="my-10">
-                <div   id="multi-slide"
-                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 } }'
-                class="relative w-full">
+                <div id="multi-slide"
+                    data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 } }'
+                    class="relative w-full">
                     <div class="carousel h-full">
-                        <div class="carousel-body h-full opacity-0">
+                        <div class="carousel-body h-full opacity-0 text-sm md:text-xl">
                             <!-- Slide 1 -->
-                            <div class="carousel-slide px-1 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
+                            <div
+                                class="carousel-slide px-1 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
                                 <div class="bg-base-200/50 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image1.png') }}" alt=""
@@ -181,7 +179,8 @@
                                 </div>
                             </div>
                             <!-- Slide 2 -->
-                            <div class="carousel-slide px-1 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
+                            <div
+                                class="carousel-slide px-1 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
                                 <div class="bg-base-200 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image2.png') }}" alt=""
@@ -196,7 +195,8 @@
                                 </div>
                             </div>
                             <!-- Slide 3 -->
-                            <div class="carousel-slide px-1 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
+                            <div
+                                class="carousel-slide px-1 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
                                 <div class="bg-base-200 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image3.png') }}" alt=""
@@ -214,8 +214,10 @@
                     <!-- Previous Slide -->
                     <button type="button" class="carousel-prev">
                         <span
-                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-                            <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                            class="size-9.5 bg-gray-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
                         </span>
                         <span class="sr-only">Previous</span>
                     </button>
@@ -223,8 +225,10 @@
                     <button type="button" class="carousel-next">
                         <span class="sr-only">Next</span>
                         <span
-                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-                            <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                            class="size-9.5 bg-gray-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
                         </span>
                     </button>
                 </div>
@@ -235,7 +239,8 @@
     {{-- Fasilitas --}}
     <div class="w-full bg-fasilitas" style="background-image: url('img/bg-fasilitas.png');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <h2 class="text-secondary text-2xl md:text-4xl leading-tight mb-4 font-poppins text-center intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
+            <h2
+                class="text-secondary text-2xl md:text-4xl leading-tight mb-4 font-poppins text-center intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
                 Dukungan sarana dan prasarana lengkap untuk pendidikan berkualitas.
             </h2>
 
@@ -334,10 +339,13 @@
     <div class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center gap-4">
-                <h2 class="text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
+                <h2
+                    class="text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
                     PM kHalifah Update
                 </h2>
-                <x-primary-button onclick="window.location.href=#" class="intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">All Blog Post</x-primary-button>
+                <x-primary-button onclick="window.location.href='{{ route('posts') }}' "
+                    class="intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">All Blog
+                    Post</x-primary-button>
             </div>
             <div id="draggable"
                 data-carousel='{ "loadingClasses": "opacity-0","dotsItemClasses": "carousel-dot carousel-active:bg-primary", "slidesQty": { "xs": 1, "lg": 3 }, "isDraggable": true }'
@@ -346,131 +354,37 @@
                     <div
                         class="carousel-body h-full carousel-dragging:transition-none carousel-dragging:cursor-grabbing cursor-grab opacity-0">
                         <!-- Slide 1 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200/50 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
+                        @foreach ($posts as $post)
+                            <div class="carousel-slide">
+                                <div class="bg-base-200/50 flex h-full justify-center p-6">
+                                    <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
+                                        {{-- @if (!empty($post->image))
+                                            <img src="{{ asset('storage/' . $post->image) }}" alt=""
+                                                class="object-cover mb-2.5 rounded-lg">
+                                        @else --}}
+                                            <img src="https://picsum.photos/600/402" alt=""
+                                                class="object-cover mb-2.5 rounded-lg">
+                                        {{-- @endif --}}
+                                        <div class="flex justify-between">
+                                            <p class="text-xs">
+                                                <span>
+                                                    <i class="ph ph-calendar-dots text-primary"></i>
+                                                </span>
+                                                {{ $post->created_at->format('d') }} 
+                                                {{ \Illuminate\Support\Carbon::parse($post->created_at)->translatedFormat('F') }} 
+                                                {{ $post->created_at->format('Y') }}
+                                            </p></span>
+                                            <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
+                                                    Comment({{ $post->comments->count() }}) </p>
+                                        </div>
+                                        <a href="{{ route('post.show', $post->slug) }}">
+                                            <h5 class="font-poppins text-lg mb-2.5 text-secondary">{{ $post->title }}</h5>
+                                        </a>
+                                        <p class="mb-2.5 text-sm sm:text-lg">{{ \Illuminate\Support\Str::limit(strip_tags($post->body), 120, '...') }}</p>
                                     </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
-                                    </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
-                                    </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200/50 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
-                                    </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 5 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
-                                    </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 6 -->
-                        <div class="carousel-slide">
-                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                    <img src="https://picsum.photos/600/402" alt=""
-                                        class="object-cover mb-2.5 rounded-lg">
-                                    <div class="flex justify-between">
-                                        <p class="text-xs"><span><i
-                                                    class="ph ph-calendar-dots text-primary"></i></span> 24 Juni
-                                            2025 </p>
-                                        <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
-                                                Comment(06) </p>
-                                    </div>
-                                    <h5 class="font-poppins text-lg mb-2.5 text-secondary">Lorem ipsum dolor sit
-                                        amet consectetur adipisicing elit. Consequuntur ducimus officia cumque?
-                                        Explicabo
-                                    </h5>
-                                    <x-primary-button>Selengkapnya...</x-primary-button>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3"></div>

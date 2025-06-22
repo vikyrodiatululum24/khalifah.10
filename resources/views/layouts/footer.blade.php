@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 text-white py-8 mt-10">
+<footer class="bg-gray-800 text-white py-8 ">
     <div class="container mx-auto max-w-7xl grid sm:grid-cols-2 md:grid-cols-4 px-4 md:px-6 lg:px-8 gap-4">
         <div class="text-sm text-gray-400 mb-4 ">
             <img src="{{ asset('img/LogoKhalifah.png') }}" alt="logo" class="h-10 w-auto inline-block mb-2">
