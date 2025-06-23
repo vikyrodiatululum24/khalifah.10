@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('eskul_category_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

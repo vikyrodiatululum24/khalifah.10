@@ -358,13 +358,15 @@
                             <div class="carousel-slide">
                                 <div class="bg-base-200/50 flex h-full justify-center p-6">
                                     <div class="sm:max-w-sm p-2 sm:p-4 lg:p-6 rounded-sm bg-white">
-                                        {{-- @if (!empty($post->image))
-                                            <img src="{{ asset('storage/' . $post->image) }}" alt=""
-                                                class="object-cover mb-2.5 rounded-lg">
-                                        @else --}}
+                                        @if (!empty($post->image))
+                                            @foreach ($post->image as $img)
+                                                <img src="{{ asset('storage/' . $img) }}" alt=""
+                                                    class="object-cover mb-2.5 rounded-lg">
+                                            @endforeach
+                                        @else
                                             <img src="https://picsum.photos/600/402" alt=""
                                                 class="object-cover mb-2.5 rounded-lg">
-                                        {{-- @endif --}}
+                                        @endif
                                         <div class="flex justify-between">
                                             <p class="text-xs">
                                                 <span>

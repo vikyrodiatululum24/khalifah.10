@@ -11,7 +11,15 @@
             <div class="w-full md:w-3/4 px-4">
                 <div
                     class="w-full intersect:motion-scale-in-0 intersect:motion-ease-spring-smooth intersect-half origin-left">
-                    <img src="https://picsum.photos/201/100" alt="eskul" class="w-full h-auto rounded-lg shadow-md">
+                    @if (!empty($post->image))
+                        @foreach ($post->image as $img)
+                            <img src="{{ asset('storage/' . $img) }}" alt=""
+                                class="object-cover w-full mb-2.5 rounded-lg">
+                        @endforeach
+                    @else
+                        <img src="https://picsum.photos/600/402" alt=""
+                            class="object-cover w-full mb-2.5 rounded-lg">
+                    @endif
                     <div class="flex py-2 gap-6">
                         <p class="text-sm"><span>
                                 <i class="ph ph-calendar-dots text-primary"></i>
@@ -45,19 +53,27 @@
             </div>
 
             <div class="w-full md:w-1/4 px-4 mb-4">
-                                <h2 class="mb-2 text-lg md:text-3xl font-bold text-secondary ">Relate Post</h2>
+                <h2 class="mb-2 text-lg md:text-3xl font-bold text-secondary ">Relate Post</h2>
                 <hr class="mb-2">
                 <div class="flex md:flex-col md:max-h-100 gap-2 overflow-auto mb-2">
                     @foreach ($relatePost as $relate)
                         <div class="mb-1">
                             <a href="{{ route('post.show', $relate->slug) }}" class="sm:flex gap-2.5">
                                 <div class="w-30 h-auto rounded-md">
-                                    <img src="https://cdn.flyonui.com/fy-assets/components/card/image-4.png"
-                                        alt="" class="w-30 object-contain shadow-md rounded-md">
+                                    @if (!empty($relate->image))
+                                        @foreach ($relate->image as $img)
+                                            <img src="{{ asset('storage/' . $img) }}" alt=""
+                                                class="object-cover mb-2.5 rounded-lg">
+                                        @endforeach
+                                    @else
+                                        <img src="https://picsum.photos/600/402" alt=""
+                                            class="object-cover mb-2.5 rounded-lg">
+                                    @endif
                                 </div>
-                                <div >
+                                <div>
                                     <h2 class="font-semibold text-sm">{{ $relate->title }}</h2>
-                                    <p class="text-xs md:text-lg">{{ \Illuminate\Support\Str::limit($relate->body, 20) }}</p>
+                                    <p class="text-xs md:text-lg">
+                                        {{ \Illuminate\Support\Str::limit($relate->body, 20) }}</p>
                                 </div>
                             </a>
                         </div>
@@ -70,12 +86,20 @@
                         <div class="mb-1">
                             <a href="{{ route('post.show', $last->slug) }}" class="sm:flex gap-2.5">
                                 <div class="w-30 h-auto rounded-md">
-                                    <img src="https://cdn.flyonui.com/fy-assets/components/card/image-4.png"
-                                        alt="" class="w-30 object-contain shadow-md rounded-md">
+                                    @if (!empty($last->image))
+                                        @foreach ($last->image as $img)
+                                            <img src="{{ asset('storage/' . $img) }}" alt=""
+                                                class="object-cover mb-2.5 rounded-lg">
+                                        @endforeach
+                                    @else
+                                        <img src="https://picsum.photos/600/402" alt=""
+                                            class="object-cover mb-2.5 rounded-lg">
+                                    @endif
                                 </div>
-                                <div >
+                                <div>
                                     <h2 class="font-semibold text-sm">{{ $last->title }}</h2>
-                                    <p class="text-xs md:text-lg">{{ \Illuminate\Support\Str::limit($last->body, 20) }}</p>
+                                    <p class="text-xs md:text-lg">{{ \Illuminate\Support\Str::limit($last->body, 20) }}
+                                    </p>
                                 </div>
                             </a>
                         </div>

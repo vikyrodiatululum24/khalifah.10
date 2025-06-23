@@ -24,7 +24,7 @@ class PostSeeder extends Seeder
         'user_id' => $users->random()->id,
         'category_id' => $categories->random()->id,
         'slug' => Str::slug($title),
-        'image' => 'image'
+        'image' => null
       ]);
       $post->tags()->attach($tags->random(rand(1, 3)));
     }
