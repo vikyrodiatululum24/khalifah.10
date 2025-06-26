@@ -22,13 +22,13 @@
                 <div class="w-full flex mb-4">
                     <div
                         class="w-full md:w-1/2 intersect:motion-scale-in-0 intersect:motion-ease-spring-smooth intersect-half origin-left">
-                        <img src="https://picsum.photos/201/100" alt="eskul"
-                            class="w-full h-auto rounded-lg shadow-md">
+                        <img src="{{ asset('img/about1.png') }}" alt="eskul"
+                            class="w-full h-48 rounded-lg shadow-md object-cover object-center">
                     </div>
                     <div
                         class="w-1/2 px-4 hidden md:block intersect:motion-delay-[300] intersect:motion-ease-spring-smooth intersect-half origin-left">
-                        <img src="https://picsum.photos/200/100" alt="eskul"
-                            class="w-full h-auto rounded-lg shadow-md">
+                        <img src="{{ asset('img/about2.png') }}" alt="eskul"
+                            class="w-full h-48 rounded-lg shadow-md object-cover object-center">
                     </div>
                 </div>
                 @foreach ($categories as $cat)

@@ -6,10 +6,10 @@
         <p class="text-center text-gray-600 mt-4 text-lg">Home <span class="text-primary">//</span> Update</p>
     </x-slot>
 
-    <div class="max-w-7xl p-2 mx-auto sm:px-6 lg:px-8 py-10 flex flex-wrap justify-center gap-4">
+    <div class="max-w-7xl p-2 mx-auto sm:px-6 lg:px-8 py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         @foreach ($posts as $post)
             <div
-                class="card group hover:shadow-sm sm:max-w-sm rounded-md shadow-sm mb-4 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 intersect:motion-blur-in-[5px] intersect:motion-ease-spring-smooth intersect-half origin-top-left">
+                class="card group hover:shadow-sm sm:max-w-sm rounded-md shadow-sm mb-4" data-aos="fade-up">
                 @if (!empty($post->image))
                     @foreach ($post->image as $img)
                         <img src="{{ asset('storage/' . $img) }}" alt="" class="object-cover mb-2.5 rounded-lg">
@@ -32,5 +32,7 @@
             </div>
         @endforeach
     </div>
-
+    <div class="mx-auto max-w-7xl mb-8 flex w-full justify-between items-center">
+        {{ $posts->links() }}
+    </div>
 </x-app-layout>

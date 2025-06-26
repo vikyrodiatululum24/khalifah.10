@@ -3,7 +3,6 @@
 @source "../views/layouts/app.blade.php";
 @import "tailwindcss-intersect";
 @plugin "tailwindcss-motion";
-@plugin "@iconify/tailwind4";
 @source "./../../node_modules/flyonui/dist/index.js";
 @source "./../../node_modules/flyonui/dist/accordion.js"; 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

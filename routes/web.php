@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\EskulController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\EskulController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +36,7 @@ Route::get('/post/{slug}', [PostController::class, 'show'])->name('post.show');
 Route::get('/blogs', function () {
     return view('blogs');
 })->name('blogs');
-Route::get('/gallery', function () {
-    return view('gallery');
-})->name('gallery');
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/psb', function () {
     return view('psb');
 })->name('psb');

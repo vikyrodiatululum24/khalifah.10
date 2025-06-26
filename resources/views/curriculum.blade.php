@@ -110,7 +110,7 @@
 
         </div>
         {{-- Calender Pendidikan --}}
-        <div class="mt-10 w-full md:w-3/4 px-4 intersect:motion-scale-in-0 intersect:motion-ease-spring-smooth intersect-half origin-top">
+        <div class="mt-10 w-full md:w-3/4 px-4" data-aos="fade-up" data-aos-duration="1000">
             <x-text-header>Kalender Pendidikan</x-text-header>
             <img src="{{ asset('img/Calendar.jpeg') }}" alt="kalender pendidikan" class="w-full h-auto rounded-lg shadow-md">
         </div>

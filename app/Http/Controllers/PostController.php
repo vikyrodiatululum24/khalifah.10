@@ -9,7 +9,7 @@ class PostController extends Controller
 {
   public function index()
   {
-    $posts = Post::with('user', 'comments')->latest()->get();
+    $posts = Post::with('user', 'comments')->latest()->paginate(12);
     return view('post.index', compact('posts'));
   }
 
@@ -18,12 +18,12 @@ class PostController extends Controller
     $post = Post::where('slug', $slug)
       ->with(['user', 'comments.children', 'comments.user'])
       ->firstOrFail();
-      // dd($post);
+    // dd($post);
     $relatePost  = Post::where('category_id', $post->category_id)
       ->where('id', '!=', $post->id)
       ->latest()
       ->get();
-      // dd($lastPost);
+    // dd($lastPost);
 
     $lastPost = Post::latest()->limit(10)->get();
     return view('post.show', compact('post', 'lastPost', 'relatePost'));

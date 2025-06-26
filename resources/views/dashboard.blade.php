@@ -1,14 +1,14 @@
 <x-app-layout>
-    <div class="bg-gradient-to-r from-cyan-200 to-blue-400 w-full py-10">
+    <div class="bg-gradient-to-r from-cyan-200 to-blue-400 w-full py-20">
         <div class="max-w-7xl flex items-center mx-auto sm:px-6 lg:px-8 ">
             <div class="sm:flex justify-between items-center gap-4">
                 <div
                     class="p-6 text-secondary sm:w-1/2 sm:px-6 lg:px-8 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
                     <h2 class="text-2xl md:text-4xl leading-tight mb-4">
-                        Memujudkan <span class="font-bold">Pemimpin</span> Masa Depan Yang <span
+                        Mewujudkan <span class="font-bold">Pemimpin</span> Masa Depan Yang <span
                             class="font-bold">Berkarakter Islami</span>
                     </h2>
-                    <x-primary-button>
+                    <x-primary-button class="mt-4" onclick="window.location.href='{{ route('psb') }}'">
                         {{ __('Daftar Sekarang') }}
                     </x-primary-button>
                 </div>
@@ -21,29 +21,29 @@
     </div>
 
     {{-- Video --}}
-    <div class="w-full relative">
-        <img src="{{ asset('img/bg-education.jpg') }}" alt="bg-education" class="w-full">
-        <iframe
-            class="rounded-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md w-3/4 max-w-4xl aspect-video intersect:motion-scale-in-0 intersect:motion-opacity-in-0 intersect:motion-blur-in-[5px] intersect:motion-ease-spring-smooth intersect-half origin-bottom"
-            src="https://www.youtube.com/embed/IgdF_UJHtXA?si=YVLyr_ss4jTzVoGW" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+    <div class="w-full"
+        style='background-image: url("{{ asset('img/bg-education.jpg') }}"); background-size: cover; background-position: center;'>
+        <div class="flex justify-center items-center max-w-7xl mx-auto py-20">
+            <iframe class="rounded-lg shadow-md w-3/4 max-w-4xl aspect-video" data-aos="zoom-in-up" data-aos-delay="300"
+                src="https://www.youtube.com/embed/IgdF_UJHtXA?si=YVLyr_ss4jTzVoGW" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
     {{-- Quote --}}
     <div class="py-10 bg-white">
         <div class="max-w-7xl mx-auto text-sm md:text-xl px-4 sm:px-6 lg:px-8">
-            <h2
-                class="font-bold text-center text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-bottom">
+            <h2 class="font-bold text-center text-secondary text-2xl md:text-4xl leading-tight mt-8 mb-4 font-poppins"
+                data-aos="zoom-in">
                 يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قِيلَ لَكُمْ تَفَسَّحُوا فِي الْمَجَالِسِ فَافْسَحُوا يَفْسَحِ
                 اللَّهُ لَكُمْ ۖ وَإِذَا قِيلَ انْشُزُوا فَانْشُزُوا يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ
                 وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ۚ وَاللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ
             </h2>
             <p class="text-center font-semibold text-accent mb-4 font-poppins">QS: Al-Mujadilah Ayat 11</p>
-            <p
-                class="text-center text-accent font-sora intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
+            <p class="text-center text-accent font-sora" data-aos="zoom-in">
                 Hai orang-orang beriman apabila dikatakan kepadamu: “Berlapang-lapanglah dalam majlis”, maka
                 lapangkanlah niscaya Allah akan memberi kelapangan untukmu. Dan apabila dikatakan: “Berdirilah kamu”,
                 maka berdirilah, niscaya Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang
@@ -52,7 +52,7 @@
         </div>
     </div>
     {{-- About Us --}}
-    <div class="py-10 bg-white">
+    <div class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex justify-between items-center gap-4">
             <div
                 class="flex items-center justify-center mx-auto gap-2 mb-5 sm:w-1/2 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
@@ -111,7 +111,7 @@
             </p>
             <div class="sm:flex justify-center gap-4 my-6 text-sm md:text-xl">
                 <div
-                    class="card sm:max-w-md bg-sky-500 text-white relative mb-4 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
+                    class="card rounded-md shadow-lg sm:max-w-md bg-sky-500 text-white relative mb-4 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier transition-transform duration-300 hover:scale-105">
                     <img src="{{ asset('img/shape.png') }}" alt="shape" class="absolute top-0 right-0 object-cover">
                     <div class="flex justify-between h-full">
                         <div class="p-2 md:p-4 lg:p-6 mb-10 sm:mb-6">
@@ -119,7 +119,7 @@
                             <p class="mb-4 font-sora">Membentuk karakter islami sejak dini dengan pendidikan berbasis
                                 akhlak, akademik, dan keterampilan.</p>
                             <div class="absolute bottom-0 left-0 right-0 p-2">
-                                <x-primary-button onclick="window.location.href='{{ route('about') }}'">
+                                <x-primary-button onclick="window.location.href='{{ route('psb') }}'">
                                     Daftar Sekarang
                                 </x-primary-button>
                             </div>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div
-                    class="card sm:max-w-md bg-blue-800 text-white relative mb-4 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
+                    class="card rounded-md shadow-lg sm:max-w-md bg-blue-800 text-white relative mb-4 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier transition-transform duration-300 hover:scale-105"
                     <img src="{{ asset('img/shape.png') }}" alt="shape" class="absolute top-0 right-0 object-cover">
                     <div class="flex justify-between h-full">
                         <div class="p-2 md:p-4 lg:p-6 mb-10 sm:mb-6">
@@ -138,7 +138,7 @@
                             <p class="mb-4 font-sora">Mempersiapkan santri menjadi generasi unggul dengan pemahaman
                                 agama yang kuat serta daya saing global.</p>
                             <div class="absolute bottom-0 left-0 right-0 p-2">
-                                <x-primary-button onclick="window.location.href='{{ route('about') }}'">
+                                <x-primary-button onclick="window.location.href='{{ route('psb') }}'">
                                     Daftar Sekarang
                                 </x-primary-button>
                             </div>
@@ -165,8 +165,7 @@
                     <div class="carousel h-full">
                         <div class="carousel-body h-full opacity-0 text-sm md:text-xl">
                             <!-- Slide 1 -->
-                            <div
-                                class="carousel-slide px-1 intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
+                            <div class="carousel-slide px-1" data-aos="fade-left">
                                 <div class="bg-base-200/50 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image1.png') }}" alt=""
@@ -179,8 +178,7 @@
                                 </div>
                             </div>
                             <!-- Slide 2 -->
-                            <div
-                                class="carousel-slide px-1 intersect:motion-scale-in-0 intersect:motion-opacity-in-0 origin-top">
+                            <div class="carousel-slide px-1" data-aos="fade-up">
                                 <div class="bg-base-200 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image2.png') }}" alt=""
@@ -195,8 +193,7 @@
                                 </div>
                             </div>
                             <!-- Slide 3 -->
-                            <div
-                                class="carousel-slide px-1 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
+                            <div class="carousel-slide px-1" data-aos="fade-right">
                                 <div class="bg-base-200 flex h-full justify-center p-6">
                                     <div class="p-2 sm:p-4 lg:p-6 rounded-md">
                                         <img src="{{ asset('img/image3.png') }}" alt=""
@@ -215,8 +212,10 @@
                     <button type="button" class="carousel-prev">
                         <span
                             class="size-9.5 bg-gray-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
                             </svg>
                         </span>
                         <span class="sr-only">Previous</span>
@@ -226,8 +225,10 @@
                         <span class="sr-only">Next</span>
                         <span
                             class="size-9.5 bg-gray-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer rtl:rotate-180"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
                             </svg>
                         </span>
                     </button>
@@ -372,17 +373,20 @@
                                                 <span>
                                                     <i class="ph ph-calendar-dots text-primary"></i>
                                                 </span>
-                                                {{ $post->created_at->format('d') }} 
-                                                {{ \Illuminate\Support\Carbon::parse($post->created_at)->translatedFormat('F') }} 
+                                                {{ $post->created_at->format('d') }}
+                                                {{ \Illuminate\Support\Carbon::parse($post->created_at)->translatedFormat('F') }}
                                                 {{ $post->created_at->format('Y') }}
                                             </p></span>
                                             <p class="text-xs"><span><i class="ph ph-chats text-primary"></i>
                                                     Comment({{ $post->comments->count() }}) </p>
                                         </div>
                                         <a href="{{ route('post.show', $post->slug) }}">
-                                            <h5 class="font-poppins text-lg mb-2.5 text-secondary">{{ $post->title }}</h5>
+                                            <h5 class="font-poppins text-lg mb-2.5 text-secondary">{{ $post->title }}
+                                            </h5>
                                         </a>
-                                        <p class="mb-2.5 text-sm sm:text-lg">{{ \Illuminate\Support\Str::limit(strip_tags($post->body), 120, '...') }}</p>
+                                        <p class="mb-2.5 text-sm sm:text-lg">
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($post->body), 120, '...') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
