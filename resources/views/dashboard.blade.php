@@ -129,8 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="card rounded-md shadow-lg sm:max-w-md bg-blue-800 text-white relative mb-4 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier transition-transform duration-300 hover:scale-105"
+                <div class="card rounded-md shadow-lg sm:max-w-md bg-blue-800 text-white relative mb-4 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier transition-transform duration-300 hover:scale-105"
                     <img src="{{ asset('img/shape.png') }}" alt="shape" class="absolute top-0 right-0 object-cover">
                     <div class="flex justify-between h-full">
                         <div class="p-2 md:p-4 lg:p-6 mb-10 sm:mb-6">
@@ -164,47 +163,81 @@
                     class="relative w-full">
                     <div class="carousel h-full">
                         <div class="carousel-body h-full opacity-0 text-sm md:text-xl">
-                            <!-- Slide 1 -->
-                            <div class="carousel-slide px-1" data-aos="fade-left">
-                                <div class="bg-base-200/50 flex h-full justify-center p-6">
-                                    <div class="p-2 sm:p-4 lg:p-6 rounded-md">
-                                        <img src="{{ asset('img/image1.png') }}" alt=""
-                                            class="object-cover rounded-md mb-2.5">
-                                        <h5 class="font-poppins text-lg mb-2.5 text-secondary">Program Tahfidz</h5>
-                                        <p class="font-sora mb-4">Program tahfidz Al-Qur'an yang dilaksanakan setiap
-                                            hari
-                                            untuk membentuk hafalan Al-Qur'an santri.</p>
+                            @php
+                                $programs = [
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2" stroke-width="2" stroke="currentColor" fill="#38bdf8"/><path d="M3 8h18" stroke="#fff" stroke-width="2"/><circle cx="7" cy="16" r="1" fill="#fff"/><circle cx="12" cy="16" r="1" fill="#fff"/><circle cx="17" cy="16" r="1" fill="#fff"/></svg>',
+                                        'title' => "Kurikulum Perpaduan",
+                                        'desc' => "Perpaduan antara Sekolah Islam Terpadu, Pesantren Modern dan Pesantren Tradisional.",
+                                        'aos' => 'fade-left',
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="3" width="16" height="18" rx="2" fill="#fbbf24"/><path d="M8 7h8M8 11h8M8 15h4" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Tahfidz Al-Qur'an",
+                                        'desc' => "Menghapal Al-Qur’an dengan metode ADZEEMA, target minimum 1 juz/semester.",
+                                        'aos' => 'fade-up',
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" fill="#34d399"/><path d="M8 12h8M8 16h8M8 8h8" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Tahsin Al-Qur'an",
+                                        'desc' => "Pembelajaran tahsin Al-Qur’an dengan metode Asy-Syafi’i.",
+                                        'aos' => 'fade-right',
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="8" r="4" fill="#6366f1"/><path d="M4 20c0-2.21 3.582-4 8-4s8 1.79 8 4" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Tenaga Pendidik Profesional",
+                                        'desc' => "Dari kalangan muda, profesional, berkompeten, alumni dalam & luar negeri.",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 2l4 4-4 4-4-4z" fill="#22d3ee"/><rect x="4" y="12" width="16" height="8" rx="2" fill="#bbf7d0"/><path d="M8 16h8" stroke="#22d3ee" stroke-width="2"/></svg>',
+                                        'title' => "Pesantren Ramah Lingkungan",
+                                        'desc' => "Menerapkan sistem EMITA (eco brick, misting, tumbler).",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="7" width="18" height="10" rx="2" fill="#f472b6"/><rect x="7" y="11" width="2" height="2" fill="#fff"/><rect x="11" y="11" width="2" height="2" fill="#fff"/><rect x="15" y="11" width="2" height="2" fill="#fff"/></svg>',
+                                        'title' => "Ruang Kelas Multimedia",
+                                        'desc' => "Fasilitas ruang kelas multimedia yang modern.",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" fill="#818cf8"/><path d="M8 8h8M8 12h8M8 16h4" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Pembelajaran Berbasis IT",
+                                        'desc' => "Menggunakan teknologi informasi dalam proses belajar mengajar.",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="7" width="16" height="10" rx="2" fill="#facc15"/><path d="M8 11h8M8 15h8" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Bilingual School",
+                                        'desc' => "Pembelajaran dengan dua bahasa (Indonesia & Inggris/Arab).",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="5" y="5" width="14" height="14" rx="2" fill="#f87171"/><path d="M9 9h6v6H9z" fill="#fff"/></svg>',
+                                        'title' => "Program Santripreneur (SMA)",
+                                        'desc' => "Membekali santri SMA dengan jiwa kewirausahaan.",
+                                        'aos' => null,
+                                    ],
+                                    [
+                                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 mx-auto text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" fill="#60a5fa"/><path d="M8 16l4-8 4 8" stroke="#fff" stroke-width="2"/></svg>',
+                                        'title' => "Program Kuliah di Timur Tengah (SMA)",
+                                        'desc' => "Persiapan khusus bagi santri SMA untuk melanjutkan studi ke Timur Tengah.",
+                                        'aos' => null,
+                                    ],
+                                ];
+                            @endphp
+                            @foreach ($programs as $program)
+                                <div class="carousel-slide px-1" @if($program['aos']) data-aos="{{ $program['aos'] }}" @endif>
+                                    <div class="bg-base-200 rounded-lg shadow p-6 flex flex-col items-center text-center h-full min-h-[340px] md:min-h-[360px] justify-between">
+                                        <div>
+                                            {!! $program['icon'] !!}
+                                            <h5 class="font-poppins text-lg mb-2 text-primary">{{ $program['title'] }}</h5>
+                                            <p class="font-sora text-accent">{{ $program['desc'] }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="carousel-slide px-1" data-aos="fade-up">
-                                <div class="bg-base-200 flex h-full justify-center p-6">
-                                    <div class="p-2 sm:p-4 lg:p-6 rounded-md">
-                                        <img src="{{ asset('img/image2.png') }}" alt=""
-                                            class="object-cover rounded-md mb-2.5">
-                                        <h5 class="font-poppins text-lg mb-2.5 text-secondary">Program Akademik dan
-                                            Keterampilan</h5>
-                                        <p class="font-sora mb-4">Pesantren Modern Khalifah membentuk santri yang
-                                            memiliki
-                                            jiwa kepemimpinan Islami, berintegritas, serta mampu menjadi pemimpin yang
-                                            bertanggung jawab.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="carousel-slide px-1" data-aos="fade-right">
-                                <div class="bg-base-200 flex h-full justify-center p-6">
-                                    <div class="p-2 sm:p-4 lg:p-6 rounded-md">
-                                        <img src="{{ asset('img/image3.png') }}" alt=""
-                                            class="object-cover rounded-md mb-2.5">
-                                        <h5 class="font-poppins text-lg mb-2.5 text-secondary">Program kepemimpinan dan
-                                            sosial</h5>
-                                        <p class="font-sora mb-4">Santri dididik untuk memiliki kepedulian sosial yang
-                                            tinggi dan aktif berkontribusi dalam kehidupan bermasyarakat.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 

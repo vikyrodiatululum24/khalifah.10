@@ -26,13 +26,13 @@ class EskulResource extends Resource
                 Forms\Components\Select::make('eskul_category_id')
                     ->label('Kategori Eskul')
                     ->relationship('eskulcategory', 'name')
-                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required(),
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\FileUpload::make('image')
                     ->directory('eskul')
+                    ->visibility('public')
                     ->image()
                     ->preserveFilenames(),
             ]);
@@ -42,11 +42,25 @@ class EskulResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('eskulcategory.name')->label('Kategori')->sortable(),
-                Tables\Columns\ImageColumn::make('image')->label('Image')->circular(),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Nama')
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('eskulcategory.name')
+                    ->label('Kategori')
+                    ->sortable(),
+
+                Tables\Columns\ImageColumn::make('image')
+                    ->label('Gambar')
+                    ->circular(),
+
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat')
+                    ->dateTime('d M Y')
+                    ->sortable(),
             ])
+
             ->filters([
                 //
             ])

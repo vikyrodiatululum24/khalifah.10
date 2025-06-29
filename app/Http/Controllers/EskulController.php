@@ -10,7 +10,8 @@ class EskulController extends Controller
 {
     public function index() {
         $categories = EskulCategory::with('eskul')->get();
+        $eskuls = Eskul::all();
         // dd($categories);
-        return view('eskul', compact('categories'));
+        return view('eskul', compact('categories', 'eskuls'));
     }
 }
