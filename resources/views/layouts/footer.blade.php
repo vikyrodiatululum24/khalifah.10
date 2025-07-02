@@ -2,8 +2,12 @@
     <div class="container mx-auto max-w-7xl grid sm:grid-cols-2 md:grid-cols-4 px-4 md:px-6 lg:px-8 gap-4">
         <div class="text-sm text-gray-400 mb-4 ">
             <img src="{{ asset('img/LogoKhalifah.png') }}" alt="logo" class="h-10 w-auto inline-block mb-2">
-            <p class="font-sora text-xs mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo totam dicta
-                dolorum. Similique quae sit?</p>
+            <p class="font-sora text-xs mb-4">
+                Pesantren Modern Khalifah berdiri pada tahun 2012 berada dibawah naungan
+                Yayasan Wakaf Khalifah. Berada diatas tanah wakaf 1,2 ha, sampai saat ini PM.
+                Khalifah memiliki Lembaga formal dibawah naungan KEMENAG dan KEMENDIKNAS
+                yaitu SMP Khalifah Boarding School dan SMA Khalifah Boarding School.
+            </p>
             <div class="flex gap-2.5">
                 <div
                     class="rounded-full p-2 bg-slate-600 flex items-center justify-center w-8 h-8 text-primary hover:text-white hover:bg-primary">
@@ -67,7 +71,8 @@
     </div>
     <div class="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <p class="text-center text-gray-400 text-xs">
-            &copy; 2025 Pesantren Modern Khalifah. All rights reserved. | Developed by <a href="https://www.instagram.com/vikyrodiatululum" class="text-primary hover:underline" target="blank" >Viky Rodiatul Ulum</a>
+            &copy; 2025 Pesantren Modern Khalifah. All rights reserved. | Developed by <a href="https://ivcode.my.id/"
+                class="text-primary hover:underline" target="blank">Viky Rodiatul Ulum</a>
         </p>
     </div>
 </footer>
